@@ -70,9 +70,9 @@
                                 </div>
                                 <div class="col-md-6" >
                                     <select name="gender" class="form-control" id="gender" required style="height: 48px; margin-left: 5px;  font-size: 14px; color:#d1d1d1">
-                                        <option disabled selected hidden value="">Gender</option>
-                                        <option value="Male" style="font-size: 20px;">Male</option>
-                                        <option value="Female" style="font-size: 20px;">Female</option>
+                                        <option disabled selected hidden value="" >Gender</option>
+                                        <option value="Male" style="font-size: 18px; color: black;">Male</option>
+                                        <option value="Female" style="font-size: 18px;color: black;">Female</option>
                                     </select>
                                     <div class="select-dropdown" required></div>
                                     <div class="invalid-feedback">
@@ -83,9 +83,9 @@
                                     <select name="status" class="form-control" onchange="(this.selectedIndex==3)?document.getElementById('status_2').style.display='block':document.getElementById('status_2').style.display='none';" id="status" required style="height: 48px; margin-left: 5px; font-size: 14px;color:#d1d1d1">
 
                                         <option disabled selected hidden value="" >Student/Employee</option>
-                                        <option value="Student" value="" style="font-size: 20px;">Student</option>
-                                        <option value="Employee" style="font-size: 20px;">Employee</option>
-                                        <option value="Other" style="font-size: 20px;">Other</option>
+                                        <option value="Student" value="" style="font-size: 20px; color: black;">Student</option>
+                                        <option value="Employee" style="font-size: 18px; color: black;">Employee</option>
+                                        <option value="Other" style="font-size: 18px; color: black;">Other</option>
 
 
 
@@ -115,7 +115,7 @@
                             </div>
                             <div id="data"></div>
                             <div>
-                                <label for="uploadfile" >Add image here </label>
+                                <label for="uploadfile" style="font-size: 14px; padding-top: 10px;" >Add image here </label>
                             <input id="uploadfile"  name="uploadfile" type="file" class="col-md-12 file form-control" data-browse-on-zone-click="true" style="margin-top: 0px; height: 48px; margin-left: 5px;" required> 
                                 <div class="invalid-feedback">
                                     Please select your personal id(image file is recommended).
