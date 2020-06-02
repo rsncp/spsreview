@@ -1,10 +1,9 @@
-var user = require('../models/user');
+const user = require('../models/user');
+const mongoose = require('mongoose');
 
-var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/spsreview',{useUnifiedTopology:true,useNewUrlParser:true});
 
-mongoose.connect('localhost:27017/spsreview');
-
-var users = [
+let users = [
     new user({
     imagePath: '../images/spss.jpg',
     name: 'Ajmal',
@@ -35,18 +34,14 @@ var users = [
   }),
 ];
 
-var done = 0;
-for(var i=0;i<users.length; i++){
-    users[i].save(function(err, result){ 
-        done++;
-        if(done === users.length){
-            exit();
-        }
-    });
-}
-
+var done = 0
+    for(var i=0; i < users.length; i++){
+    users[i].save((error, result)=>{
+    done++
+    if (done === users.length){
+        exit()
+    }
+})}
 function exit(){
-    mongoose.disconnect();
+    mongoose.disconnect()
 }
-
-

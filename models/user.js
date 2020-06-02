@@ -1,31 +1,37 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-var Schema = new Schema({
+const schema = new Schema({
     imagePath: {
         type: String,
-        required: true
+        required: true,
+        trim:true
     },
 
     name: {
         type: String,
-        required: true
+        required: true,
+        trim:true
     },
 
     place: {
         type: String,
-        required: true
+        required: true,
+        trim:true
     },
 
     gender: {
         type: String,
-        required: true
+        required: true,
+        trim:true
     },
 
-    email: {
-        type: String,
-        required: true
-    },
+    email:{
+        type:String,
+        required:true,
+        lowercase:true,
+        trim:true
+        },
 
 });
 

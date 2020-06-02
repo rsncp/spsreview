@@ -13,7 +13,7 @@ let formdisplayRouter=require('./routes/formdisplay');
 let formeditRouter=require('./routes/formedit');
 
 var app = express();
-mongoose.connect('localhost:27017/spsreview');
+mongoose.connect('mongodb://localhost:27017/spsreview',{useUnifiedTopology:true,useNewUrlParser:true});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
