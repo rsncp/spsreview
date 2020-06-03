@@ -3,7 +3,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var mongoose = require('mongoose');
+
+let db = require('./dbconfig/db-connect');
+let session = require('express-session');
+let passport = require('passport');
+let flash = require('connect-flash');
+let bodyParser = require('body-parser');
+
+let MongoStore = require('connect-mongo')(session);
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -13,7 +20,8 @@ let formdisplayRouter=require('./routes/formdisplay');
 let formeditRouter=require('./routes/formedit');
 
 var app = express();
-mongoose.connect('mongodb://localhost:27017/spsreview',{useUnifiedTopology:true,useNewUrlParser:true});
+
+require('./config/passport');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,7 +31,29 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+app.use(session({
+  secret:'mysecret',
+  resave:false,
+  saveUninitialized:false,
+  cookie: { maxAge: 180 * 60 * 1000 }
+}));
+
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(function (req,res,next) {
+  res.locals.login=req.isAuthenticated();
+  next();
+});
+
+app.use(function(req, res,next){
+  res.locals.session = req.session;
+  next();
+});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -46,6 +76,17 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+db.connect(function (error) {
+
+  if (error){
+    console.log('Unable to connect database');
+    process.exit(1);
+  } else {
+    console.log('sps review Database connecetd successfully...');
+  }
+
 });
 
 module.exports = app;

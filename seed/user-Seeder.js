@@ -1,47 +1,88 @@
-const user = require('../models/user');
-const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/spsreview',{useUnifiedTopology:true,useNewUrlParser:true});
 
-let users = [
-    new user({
-    imagePath: '../images/spss.jpg',
-    name: 'Ajmal',
-    place:'calicut',
-    gender:'male',
-    email:'mohajmal@gmail.com'
-  }),
-  new user({
-    imagePath: '../images/spss.jpg',
-    name: 'Ajmal',
-    place:'calicut',
-    gender:'male',
-    email:'mohajmal@gmail.com'
-  }),
-  new user({
-    imagePath: '../images/spss.jpg',
-    name: 'Ajmal',
-    place:'calicut',
-    gender:'male',
-    email:'mohajmal@gmail.com'
-  }),
-  new user({
-    imagePath: '../images/spss.jpg',
-    name: 'Ajmal',
-    place:'calicut',
-    gender:'male',
-    email:'mohajmal@gmail.com'
-  }),
-];
 
-var done = 0
-    for(var i=0; i < users.length; i++){
-    users[i].save((error, result)=>{
-    done++
-    if (done === users.length){
-        exit()
+
+let db=require('../dbconfig/db-connect');
+
+
+db.connect(function (error) {
+    if (error){
+        console.log('DB connection error');
+        process.exit(1);
+    } else{
+        console.log('connected successfully and inserting data to db');
+
+        db.get().collection('user').insertMany([
+            {
+                imagePath: '../images/avatar-04.jpg',
+                name: 'Ajmal',
+                place:'calicut',
+                gender:'male',
+                email:'mohajmal@gmail.com',
+                facebook:'https://www.facebook.com/crossroadstalks/',
+                telegram: 'https://t.me/crtalks',
+                linkedin: ' https://www.linkedin.com/in/nikhilkilivayil/',
+                whatsapp:'https://api.whatsapp.com/send?phone=91'
+
+            },
+            {
+                imagePath: '../images/avatar-04.jpg',
+                name: 'Ajmal',
+                place:'calicut',
+                gender:'male',
+                email:'mohajmal@gmail.com',
+                facebook:'https://www.facebook.com/crossroadstalks/',
+                telegram: 'https://t.me/crtalks',
+                linkedin: ' https://www.linkedin.com/in/nikhilkilivayil/',
+                whatsapp:'https://api.whatsapp.com/send?phone=91'
+            },
+            {
+                imagePath: '../images/avatar-04.jpg',
+                name: 'Ajmal',
+                place:'calicut',
+                gender:'male',
+                email:'mohajmal@gmail.com',
+                facebook:'https://www.facebook.com/crossroadstalks/',
+                telegram: 'https://t.me/crtalks',
+                linkedin: ' https://www.linkedin.com/in/nikhilkilivayil/',
+                whatsapp:'https://api.whatsapp.com/send?phone=91'
+            },
+            {
+                imagePath: '../images/avatar-04.jpg',
+                name: 'Ajmal',
+                place:'calicut',
+                gender:'male',
+                email:'mohajmal@gmail.com',
+                facebook:'https://www.facebook.com/crossroadstalks/',
+                telegram: 'https://t.me/crtalks',
+                linkedin: ' https://www.linkedin.com/in/nikhilkilivayil/',
+                whatsapp:'https://api.whatsapp.com/send?phone=91'
+            },
+            {
+                imagePath: '../images/avatar-04.jpg',
+                name: 'Ajmal',
+                place:'calicut',
+                gender:'male',
+                email:'mohajmal@gmail.com',
+                facebook:'https://www.facebook.com/crossroadstalks/',
+                telegram: 'https://t.me/crtalks',
+                linkedin: ' https://www.linkedin.com/in/nikhilkilivayil/',
+                whatsapp:'https://api.whatsapp.com/send?phone=91'
+            },
+            {
+                imagePath: '../images/avatar-04.jpg',
+                name: 'Ajmal',
+                place:'calicut',
+                gender:'male',
+                email:'mohajmal@gmail.com',
+                facebook:'https://www.facebook.com/crossroadstalks/',
+                telegram: 'https://t.me/crtalks',
+                linkedin: ' https://www.linkedin.com/in/nikhilkilivayil/',
+                whatsapp:'https://api.whatsapp.com/send?phone=91',
+            }
+        ]);
+
     }
-})}
-function exit(){
-    mongoose.disconnect()
-}
+
+});
+

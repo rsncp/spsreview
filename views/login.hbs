@@ -6,11 +6,21 @@
           <div class="fadeIn first">
             <img src="../images/spsr.jpg" id="icon" alt="User Icon" />
           </div>
-      
+
+            {{#if hasErrors}}
+                <div class="alert alert-danger">
+                    {{#each messages}}
+                        <p>{{this}}</p>
+                    {{/each}}
+                </div>
+            {{/if}}
+
           <!-- Login Form -->
-          <form action="/admin" method="post">
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-            <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
+          <form action="/login/logIn" method="post">
+            <input type="email" id="email" class="fadeIn second" name="email" placeholder="email" style="width: 72%;text-align: center;height: 45px; font-size: 20px;
+            border-color: whitesmoke;background-color: whitesmoke;">
+            <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" style="width: 72%">
+              <input type="hidden" value="{{csrfToken}}" name="_csrf">
             <input type="submit" class="fadeIn fourth" value="Log In">
           </form>
       
