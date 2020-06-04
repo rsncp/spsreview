@@ -1,0 +1,177 @@
+
+
+
+<div class="contact-page">
+    <div class="page-header">
+
+
+        <div class="page-header-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="entry-header">
+                            <h1 style="font-size: 5.5em; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-top: -116px;"><span style="color: #bd1a20;">SPS .</span> Members Data Collection</h1>
+                        </header><!-- .entry-header -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .page-header-overlay -->
+    </div><!-- .page-header -->
+
+    <br>
+    <br>
+    <h3 style="padding-left:190px;">Add details here</h3>
+
+    <form id="form" class="needs-validation" action="/formdisplay" method="POST" novalidate>
+
+        <div class="row justify-content-between">
+
+            <div class="container" style="margin-top: -87px;padding-bottom: 20px;">
+                <div class=" col-md-12">
+                    <div class="contact-form">
+
+
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Full Name" name="name" id="name" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your fullname.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <input type="text" class="form-control" placeholder="Telegram Id" name="telegramid" id="tgid" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your telegaram id.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="facebook Id" name="facebookid" id="name" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your facebook id
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <input type="text" class="form-control" placeholder="linked-in Id" name="linkinid" id="tgid" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your linked-in id.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Qualification" name="qualification" id="name" required>
+                                    <div class="invalid-feedback">
+                                        Qualification
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <input type="text" class="form-control" placeholder="date of birth" name="dob" id="tgid" required>
+                                    <div class="invalid-feedback">
+                                        date of birth
+                                    </div>
+                                </div>
+                                <div class="col-md-6" >
+                                    <input type="number" class="form-control" placeholder="Contact Number" name="contact_no" id="contact_no" required style="height: 48px; margin-left: 5px; font-size: 14px; color:#ebebeb">
+                                    <div class="invalid-feedback">
+                                        Please enter your Phonenumber.
+                                    </div>
+                                </div>
+                                <div class="col-md-6" >
+                                    <input type="number" class="form-control" placeholder="Alternate Number (if any)" name="alt_contact_no" id="alt_contact_no" style="height: 48px; margin-left: 5px; font-size: 14px; color:#d1d1d1">
+                                </div>
+                                <div class="col-md-6" >
+                                    <select for="gender" class="form-control" id="gender" required style="height: 48px; margin-left: 5px;  font-size: 14px; color:#d1d1d1">
+                                        <option disabled selected hidden value="" >Gender</option>
+                                        <option name="gender" value="Male" style="font-size: 18px; color: black;">Male</option>
+                                        <option name="gender" value="Female" style="font-size: 18px;color: black;">Female</option>
+                                    </select>
+                                    <div class="select-dropdown" required></div>
+                                    <div class="invalid-feedback">
+                                        Please Select The Gender.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 " >
+                                    <select for="status" class="form-control" onchange="(this.selectedIndex==3)?document.getElementById('status_2').style.display='block':document.getElementById('status_2').style.display='none';" id="status" required style="height: 48px; margin-left: 5px; font-size: 14px;color:#d1d1d1">
+
+                                        <option disabled selected hidden value="" >Student/Employee</option>
+                                        <option name="status" value="Student" value="" style="font-size: 20px; color: black;">Student</option>
+                                        <option name="status" value="Employee" style="font-size: 18px; color: black;">Employee</option>
+                                        <option name="status" value="Other" style="font-size: 18px; color: black;">Other</option>
+
+
+
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                    <div class="invalid-feedback">
+                                        Please select your current status.
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <input type="text" class="form-control" style="display: none;" class="col-md-12" placeholder="Your Current Status" name="status_2" id="status_2">
+                            </div>
+
+                            <div>
+                                <input type="email"  class="col-md-12 form-control" placeholder="Your Email" name="email" id="email" required style="height: 48px; margin-left: 5px; font-size: 14px;">
+                                <div class="invalid-feedback">
+                                    Please enter your email id.
+                                </div>
+                            </div>
+                            <div>
+                                <textarea class="col-md-12 form-control" placeholder="Address" rows="4" name="address" id="address" required style="height: 48px; margin-left: 5px; font-size: 14px;"></textarea>
+                                <div class="invalid-feedback">
+                                    Please enter your address.
+                                </div>
+                            </div>
+                            <div id="data"></div>
+                            <div>
+                                <label for="uploadfile" style="font-size: 14px; padding-top: 10px;" >Add image here </label>
+                                <input id="uploadfile"  name="uploadfile" type="file" class="col-md-12 file form-control" data-browse-on-zone-click="true" style="margin-top: 0px; height: 48px; margin-left: 5px;" required>
+                                <div class="invalid-feedback">
+                                    Please select your personal id(image file is recommended).
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <textarea class="col-md-12 form-control mb-3" placeholder="Tell Us About You" rows="8" id="tellus" name="tellus" required style="height: 48px; margin-left: 5px;"></textarea>
+                                <div class="invalid-feedback">
+                                    Please tell us about yourself.
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div><!-- .contact-info -->
+                </div>
+                <div class="col-md-12">
+
+                    <button type="submit" id="btn-one" class="btn btn-success btn-block">update</button>
+                </div>
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </form><!-- .container -->
+</div>
+
+
+
+
+<footer class="site-footer bg-light">
+
+
+
+    <div class="footer-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 text-center">
+                    Copyright &copy;Packapeer Academy Pvt Ltd <script>document.write(new Date().getFullYear());</script>
+                </div>
+
+
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .footer-bar -->
+</footer><!-- .site-footer -->

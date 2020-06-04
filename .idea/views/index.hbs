@@ -1,0 +1,58 @@
+{{!-- main page --}}
+
+
+
+
+
+{{!-- card display --}}
+       <section>
+        
+
+        <div class="container">
+            <h1 class="heading">SPS Alumni</h1>
+
+             <!-- <div class="card" style="width: 40rem;height: 13rem;margin-left: 260px">
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 40rem;height: 13rem;margin-left: 260px">
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div> -->
+
+         
+
+            <div class="card-wrapper">
+
+                {{#each data}}
+
+                <div class="card">
+                <img src="../images/spss.jpg" alt="card background" class="card-img">
+                <img src="{{this.imagePath}}" alt="profile image" class="profile-img">
+                <h1>{{this.name}}</h1>
+                <p class="job title">sps holder</p>
+                <p class="about">Name : {{this.name}}<br>
+                    place : {{this.place}}<br>
+                    Gender : {{this.gender}} <br>
+                    email : {{this.email}}</p>
+                <a href="Resume-CV-Design-N19-master/index.html" class="btn">more info</a>
+                <ul class="social-media">
+                    <li><a href="{{this.facebook}}"><i class="fa fa-facebook-square"></i></a></li>
+                    <li><a href="{{this.telegram}}"><i class="fa fa-telegram"></i></a></li>
+                    <li><a href="{{this.linkedin}}"><i class="fa fa-linkedin-square"></i></a></li>
+                    <li><a href="{{this.whatsapp}}"><i class="fa fa-whatsapp"></i></a></li>
+                </ul>
+              </div>
+            {{/each}}
+
+
+             
+             
+            </div>
+        </div>
+    </section>
