@@ -1,7 +1,7 @@
 
 
 
-<body class="contact-page">
+<div class="contact-page">
 <div class="page-header">
    
 
@@ -22,7 +22,7 @@
 <br>
 <h3 style="padding-left:190px;">Add details here</h3>
 
-    <form id="form" class="needs-validation" action="https://script.google.com/a/packapeer.com/macros/s/AKfycbxCj2pug63I2uqL9jcclE26vsWKzglIx5HEsi-v/exec" method="POST" novalidate>
+    <form id="form" class="needs-validation" action="/formdisplay" method="POST" novalidate>
 
         <div class="row justify-content-between">
 
@@ -41,33 +41,33 @@
                                 </div>
                                 <div class="col-md-6">
 
-                                    <input type="text" class="form-control" placeholder="Telegram Id" name="tgid" id="tgid" required>
+                                    <input type="text" class="form-control" placeholder="Telegram Id" name="telegramid" id="tgid" required>
                                     <div class="invalid-feedback">
                                         Please enter your telegaram id.
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="facebook Id" name="name" id="name" required>
+                                    <input type="text" class="form-control" placeholder="facebook Id" name="facebookid" id="name" required>
                                     <div class="invalid-feedback">
                                         Please enter your facebook id
                                     </div>
                                 </div>
                                 <div class="col-md-6">
 
-                                    <input type="text" class="form-control" placeholder="linked-in Id" name="tgid" id="tgid" required>
+                                    <input type="text" class="form-control" placeholder="linked-in Id" name="linkinid" id="tgid" required>
                                     <div class="invalid-feedback">
                                         Please enter your linked-in id.
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Qualification" name="name" id="name" required>
+                                    <input type="text" class="form-control" placeholder="Qualification" name="qualification" id="name" required>
                                     <div class="invalid-feedback">
                                         Qualification
                                     </div>
                                 </div>
                                 <div class="col-md-6">
 
-                                    <input type="text" class="form-control" placeholder="date of birth" name="tgid" id="tgid" required>
+                                    <input type="text" class="form-control" placeholder="date of birth" name="dob" id="tgid" required>
                                     <div class="invalid-feedback">
                                         date of birth
                                     </div>
@@ -82,10 +82,10 @@
                                     <input type="number" class="form-control" placeholder="Alternate Number (if any)" name="alt_contact_no" id="alt_contact_no" style="height: 48px; margin-left: 5px; font-size: 14px; color:#d1d1d1">
                                 </div>
                                 <div class="col-md-6" >
-                                    <select name="gender" class="form-control" id="gender" required style="height: 48px; margin-left: 5px;  font-size: 14px; color:#d1d1d1">
+                                    <select for="gender" class="form-control" id="gender" required style="height: 48px; margin-left: 5px;  font-size: 14px; color:#d1d1d1">
                                         <option disabled selected hidden value="" >Gender</option>
-                                        <option value="Male" style="font-size: 18px; color: black;">Male</option>
-                                        <option value="Female" style="font-size: 18px;color: black;">Female</option>
+                                        <option name="gender" value="Male" style="font-size: 18px; color: black;">Male</option>
+                                        <option name="gender" value="Female" style="font-size: 18px;color: black;">Female</option>
                                     </select>
                                     <div class="select-dropdown" required></div>
                                     <div class="invalid-feedback">
@@ -93,12 +93,12 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 " >
-                                    <select name="status" class="form-control" onchange="(this.selectedIndex==3)?document.getElementById('status_2').style.display='block':document.getElementById('status_2').style.display='none';" id="status" required style="height: 48px; margin-left: 5px; font-size: 14px;color:#d1d1d1">
+                                    <select for="status" class="form-control" onchange="(this.selectedIndex==3)?document.getElementById('status_2').style.display='block':document.getElementById('status_2').style.display='none';" id="status" required style="height: 48px; margin-left: 5px; font-size: 14px;color:#d1d1d1">
 
                                         <option disabled selected hidden value="" >Student/Employee</option>
-                                        <option value="Student" value="" style="font-size: 20px; color: black;">Student</option>
-                                        <option value="Employee" style="font-size: 18px; color: black;">Employee</option>
-                                        <option value="Other" style="font-size: 18px; color: black;">Other</option>
+                                        <option name="status" value="Student" value="" style="font-size: 20px; color: black;">Student</option>
+                                        <option name="status" value="Employee" style="font-size: 18px; color: black;">Employee</option>
+                                        <option name="status" value="Other" style="font-size: 18px; color: black;">Other</option>
 
 
 
