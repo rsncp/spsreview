@@ -22,7 +22,7 @@
 <br>
 <h3 style="padding-left:190px;">Add details here</h3>
 
-    <form id="form" class="needs-validation" action="/formdisplay" method="POST" novalidate>
+    <form id="form"  class="needs-validation" action="/formdisplay"  method="POST"  enctype="multipart/form-data" novalidate>
 
         <div class="row justify-content-between">
 
@@ -36,69 +36,115 @@
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" placeholder="Your Full Name" name="name" id="name" required>
                                     <div class="invalid-feedback">
-                                        Please enter your fullname.
+                                        Please enter your Full name.
                                     </div>
                                 </div>
-                                <div class="col-md-6">
 
-                                    <input type="text" class="form-control" placeholder="Telegram Id" name="telegramid" id="tgid" required>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="place" name="place" id="place" required>
                                     <div class="invalid-feedback">
-                                        Please enter your telegaram id.
+                                        Please enter your place
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="facebook Id" name="facebookid" id="name" required>
-                                    <div class="invalid-feedback">
-                                        Please enter your facebook id
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
 
-                                    <input type="text" class="form-control" placeholder="linked-in Id" name="linkinid" id="tgid" required>
-                                    <div class="invalid-feedback">
-                                        Please enter your linked-in id.
-                                    </div>
-                                </div>
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" placeholder="Qualification" name="qualification" id="name" required>
                                     <div class="invalid-feedback">
                                         Qualification
                                     </div>
                                 </div>
-                                <div class="col-md-6">
 
-                                    <input type="text" class="form-control" placeholder="date of birth" name="dob" id="tgid" required>
+                                <div class="col-md-6" >
+                                    <select for="gender" name="gender" class="form-control" id="gender" required style="height: 48px; margin-left: 5px;  font-size: 14px; color:#d1d1d1">
+                                        <option disabled selected hidden >Gender</option>
+                                        <option name="gender" id="gender" value="Male" style="font-size: 18px; color: black;">Male</option>
+                                        <option name="gender" id="gender" value="Female" style="font-size: 18px;color: black;">Female</option>
+                                    </select>
+                                    <div class="select-dropdown" required></div>
                                     <div class="invalid-feedback">
-                                        date of birth
+                                        Please Select The Gender
                                     </div>
                                 </div>
+
+                                <div class="col-md-6">
+
+
+                                    <input type="date" class="form-control" placeholder="date of birth" name="dob" id="tgid" id="date" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" required style="margin-top: 20px;height: 46px;font-size: 16px;align-items: baseline;border: #ebebeb; background: #f7f7f7;}">
+                                    <div class="invalid-feedback">
+                                        Date of Birth
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <div class="col-md-6">
+
+                                    <input type="text" class="form-control" placeholder="Telegram Id" name="telegramid" id="tgid">
+                                    <div class="invalid-feedback">
+                                        Please enter your telegaram id.
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="facebook Id" name="facebookid" id="name" >
+                                    <div class="invalid-feedback">
+                                        Please enter your facebook id
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <input type="text" class="form-control" placeholder="linked-in Id" name="linkedinid" id="tgid">
+                                    <div class="invalid-feedback">
+                                        Please enter your linked-in id.
+                                    </div>
+                                </div>
+
+
                                 <div class="col-md-6" >
-                                    <input type="number" class="form-control" placeholder="Contact Number" name="contact_no" id="contact_no" required style="height: 48px; margin-left: 5px; font-size: 14px; color:#ebebeb">
+                                    <input type="number" class="form-control" placeholder="Contact Number" name="contact_no" id="contact_no" required style="height: 48px; margin-left: 5px; font-size: 14px;">
                                     <div class="invalid-feedback">
                                         Please enter your Phonenumber.
                                     </div>
                                 </div>
                                 <div class="col-md-6" >
-                                    <input type="number" class="form-control" placeholder="Alternate Number (if any)" name="alt_contact_no" id="alt_contact_no" style="height: 48px; margin-left: 5px; font-size: 14px; color:#d1d1d1">
+                                    <input type="number" class="form-control" placeholder="Alternate Number (if any)" name="alt_contact_no" id="alt_contact_no" style="height: 48px; margin-left: 5px; font-size: 14px;">
                                 </div>
-                                <div class="col-md-6" >
-                                    <select for="gender" class="form-control" id="gender" required style="height: 48px; margin-left: 5px;  font-size: 14px; color:#d1d1d1">
-                                        <option disabled selected hidden value="" >Gender</option>
-                                        <option name="gender" value="Male" style="font-size: 18px; color: black;">Male</option>
-                                        <option name="gender" value="Female" style="font-size: 18px;color: black;">Female</option>
-                                    </select>
-                                    <div class="select-dropdown" required></div>
+
+                                <div class="col-md-6">
+
+                                    <input type="text" class="form-control" placeholder="Designation" name="designation" id="designation">
                                     <div class="invalid-feedback">
-                                        Please Select The Gender.
+                                        Please enter your designation
                                     </div>
                                 </div>
+
+                                <div class="col-md-6">
+
+                                    <input type="text" class="form-control" placeholder="Project Name" name="projectname" id="projectname">
+                                    <div class="invalid-feedback">
+                                        Please enter your project name
+                                    </div>
+                                </div> <div class="col-md-6">
+
+                                <input type="text" class="form-control" placeholder="project language" name="projectlang" id="projectlang">
+                                <div class="invalid-feedback">
+                                    Please enter your project language
+                                </div>
+                            </div>
+
                                 <div class="col-md-6 " >
-                                    <select for="status" class="form-control" onchange="(this.selectedIndex==3)?document.getElementById('status_2').style.display='block':document.getElementById('status_2').style.display='none';" id="status" required style="height: 48px; margin-left: 5px; font-size: 14px;color:#d1d1d1">
+                                    <select for="status"  name="status" class="form-control" onchange="(this.selectedIndex==3)?document.getElementById('status_2').style.display='block':document.getElementById('status_2').style.display='none';" id="status" required style="height: 48px; margin-left: 5px; font-size: 14px;color:#d1d1d1">
 
                                         <option disabled selected hidden value="" >Student/Employee</option>
-                                        <option name="status" value="Student" value="" style="font-size: 20px; color: black;">Student</option>
-                                        <option name="status" value="Employee" style="font-size: 18px; color: black;">Employee</option>
-                                        <option name="status" value="Other" style="font-size: 18px; color: black;">Other</option>
+                                        <option name="status" id="status" value="Student" style="font-size: 20px; color: black;">Student</option>
+                                        <option name="status" id="status" value="Employee" style="font-size: 18px; color: black;">Employee</option>
+                                        <option name="status" id="status" value="Other" style="font-size: 18px; color: black;">Other</option>
 
 
 
@@ -137,7 +183,7 @@
 
 
                             <div>
-                                <textarea class="col-md-12 form-control mb-3" placeholder="Tell Us About You" rows="8" id="tellus" name="tellus" required style="height: 48px; margin-left: 5px;"></textarea>
+                                <textarea class="col-md-12 form-control mb-3" placeholder="Tell Us About You" rows="8" id="tellus" name="tellus" required style="height: 48px; margin-left: 5px;font-size: 15px"></textarea>
                                 <div class="invalid-feedback">
                                     Please tell us about yourself.
                                 </div>

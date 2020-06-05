@@ -1,28 +1,28 @@
 
 
 
-<body class="contact-page">
-<div class="page-header">
-   
+<div class="contact-page">
+    <div class="page-header">
 
-    <div class="page-header-overlay">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <header class="entry-header">
-                        <h1 style="font-size: 5.5em; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-top: -116px;"><span style="color: #bd1a20;">Exclusive</span> Members Data Collection</h1>
-                    </header><!-- .entry-header -->
-                </div><!-- .col -->
-            </div><!-- .row -->
-        </div><!-- .container -->
-    </div><!-- .page-header-overlay -->
-</div><!-- .page-header -->
 
-<br>
-<br>
-<h3 style="padding-left:190px;">Add details here</h3>
+        <div class="page-header-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="entry-header">
+                            <h1 style="font-size: 5.5em; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-top: -116px;"><span style="color: #bd1a20;">SPS .</span> Members Data Collection</h1>
+                        </header><!-- .entry-header -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .page-header-overlay -->
+    </div><!-- .page-header -->
 
-    <form id="form" class="needs-validation" action="https://script.google.com/a/packapeer.com/macros/s/AKfycbxCj2pug63I2uqL9jcclE26vsWKzglIx5HEsi-v/exec" method="POST" novalidate>
+    <br>
+    <br>
+    <h3 style="padding-left:190px;">Add details here</h3>
+
+    <form id="form"  class="needs-validation" action="/formdisplay"  method="POST"  enctype="multipart/form-data" novalidate>
 
         <div class="row justify-content-between">
 
@@ -39,66 +39,114 @@
                                         Please enter your fullname.
                                     </div>
                                 </div>
-                                <div class="col-md-6">
 
-                                    <input type="text" class="form-control" placeholder="Telegram Id" name="tgid" id="tgid" required>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="place" name="place" id="name" required>
                                     <div class="invalid-feedback">
-                                        Please enter your telegaram id.
+                                        Please enter your place
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="facebook Id" name="name" id="name" required>
-                                    <div class="invalid-feedback">
-                                        Please enter your facebook id
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
 
-                                    <input type="text" class="form-control" placeholder="linked-in Id" name="tgid" id="tgid" required>
-                                    <div class="invalid-feedback">
-                                        Please enter your linked-in id.
-                                    </div>
-                                </div>
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Qualification" name="name" id="name" required>
+                                    <input type="text" class="form-control" placeholder="Qualification" name="qualification" id="name" required>
                                     <div class="invalid-feedback">
                                         Qualification
                                     </div>
                                 </div>
-                                <div class="col-md-6">
 
-                                    <input type="text" class="form-control" placeholder="date of birth" name="tgid" id="tgid" required>
-                                    <div class="invalid-feedback">
-                                        date of birth
-                                    </div>
-                                </div>
                                 <div class="col-md-6" >
-                                    <input type="number" class="form-control" placeholder="Contact Number" name="contact_no" id="contact_no" required style="height: 48px; margin-left: 5px; font-size: 14px; color:#ebebeb">
-                                    <div class="invalid-feedback">
-                                        Please enter your Phonenumber.
-                                    </div>
-                                </div>
-                                <div class="col-md-6" >
-                                    <input type="number" class="form-control" placeholder="Alternate Number (if any)" name="alt_contact_no" id="alt_contact_no" style="height: 48px; margin-left: 5px; font-size: 14px; color:#d1d1d1">
-                                </div>
-                                <div class="col-md-6" >
-                                    <select name="gender" class="form-control" id="gender" required style="height: 48px; margin-left: 5px;  font-size: 14px; color:#d1d1d1">
-                                        <option disabled selected hidden value="" >Gender</option>
-                                        <option value="Male" style="font-size: 18px; color: black;">Male</option>
-                                        <option value="Female" style="font-size: 18px;color: black;">Female</option>
+                                    <select for="gender" name="gender" class="form-control" id="gender" required style="height: 48px; margin-left: 5px;  font-size: 14px; color:#d1d1d1">
+                                        <option disabled selected hidden >Gender</option>
+                                        <option name="gender" id="gender" value="Male" style="font-size: 18px; color: black;">Male</option>
+                                        <option name="gender" id="gender" value="Female" style="font-size: 18px;color: black;">Female</option>
                                     </select>
                                     <div class="select-dropdown" required></div>
                                     <div class="invalid-feedback">
                                         Please Select The Gender.
                                     </div>
                                 </div>
+
+                                <div class="col-md-6">
+
+
+                                    <input type="date" class="form-control" placeholder="date of birth" name="dob" id="tgid" id="date" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" required style="margin-top: 20px;height: 46px;font-size: 16px;align-items: baseline;border: #ebebeb; background: #f7f7f7;}">
+                                    <div class="invalid-feedback">
+                                        date of birth
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <div class="col-md-6">
+
+                                    <input type="text" class="form-control" placeholder="Telegram Id" name="telegramid" id="tgid" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your telegaram id.
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="facebook Id" name="facebookid" id="name" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your facebook id
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <input type="text" class="form-control" placeholder="linked-in Id" name="linkedinid" id="tgid" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your linked-in id.
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6" >
+                                    <input type="number" class="form-control" placeholder="Contact Number" name="contact_no" id="contact_no" required style="height: 48px; margin-left: 5px; font-size: 14px;">
+                                    <div class="invalid-feedback">
+                                        Please enter your Phonenumber.
+                                    </div>
+                                </div>
+                                <div class="col-md-6" >
+                                    <input type="number" class="form-control" placeholder="Alternate Number (if any)" name="alt_contact_no" id="alt_contact_no" style="height: 48px; margin-left: 5px; font-size: 14px;">
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <input type="text" class="form-control" placeholder="Designation" name="designation" id="pd">
+                                    <div class="invalid-feedback">
+                                        Please enter your designation
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <input type="text" class="form-control" placeholder="Project Name" name="project-name" id="pn">
+                                    <div class="invalid-feedback">
+                                        Please enter your project name
+                                    </div>
+                                </div> <div class="col-md-6">
+
+                                <input type="text" class="form-control" placeholder="project language" name="project-lang" id="pl">
+                                <div class="invalid-feedback">
+                                    Please enter your project language
+                                </div>
+                            </div>
+
+
+
                                 <div class="col-md-6 " >
-                                    <select name="status" class="form-control" onchange="(this.selectedIndex==3)?document.getElementById('status_2').style.display='block':document.getElementById('status_2').style.display='none';" id="status" required style="height: 48px; margin-left: 5px; font-size: 14px;color:#d1d1d1">
+                                    <select for="status"  name="status" class="form-control" onchange="(this.selectedIndex==3)?document.getElementById('status_2').style.display='block':document.getElementById('status_2').style.display='none';" id="status" required style="height: 48px; margin-left: 5px; font-size: 14px;color:#d1d1d1">
 
                                         <option disabled selected hidden value="" >Student/Employee</option>
-                                        <option value="Student" value="" style="font-size: 20px; color: black;">Student</option>
-                                        <option value="Employee" style="font-size: 18px; color: black;">Employee</option>
-                                        <option value="Other" style="font-size: 18px; color: black;">Other</option>
+                                        <option name="status" id="status" value="Student" style="font-size: 20px; color: black;">Student</option>
+                                        <option name="status" id="status" value="Employee" style="font-size: 18px; color: black;">Employee</option>
+                                        <option name="status" id="status" value="Other" style="font-size: 18px; color: black;">Other</option>
 
 
 
@@ -129,7 +177,7 @@
                             <div id="data"></div>
                             <div>
                                 <label for="uploadfile" style="font-size: 14px; padding-top: 10px;" >Add image here </label>
-                            <input id="uploadfile"  name="uploadfile" type="file" class="col-md-12 file form-control" data-browse-on-zone-click="true" style="margin-top: 0px; height: 48px; margin-left: 5px;" required> 
+                                <input id="uploadfile"  name="uploadfile" type="file" class="col-md-12 file form-control" data-browse-on-zone-click="true" style="margin-top: 0px; height: 48px; margin-left: 5px;" required>
                                 <div class="invalid-feedback">
                                     Please select your personal id(image file is recommended).
                                 </div>
@@ -137,7 +185,7 @@
 
 
                             <div>
-                                <textarea class="col-md-12 form-control mb-3" placeholder="Tell Us About You" rows="8" id="tellus" name="tellus" required style="height: 48px; margin-left: 5px;"></textarea>
+                                <textarea class="col-md-12 form-control mb-3" placeholder="Tell Us About You" rows="8" id="tellus" name="tellus" required style="height: 48px; margin-left: 5px;font-size: 15px"></textarea>
                                 <div class="invalid-feedback">
                                     Please tell us about yourself.
                                 </div>
@@ -146,10 +194,10 @@
 
                         </div>
                     </div><!-- .contact-info -->
-                 </div>
+                </div>
                 <div class="col-md-12">
 
-                    <button type="submit" id="btn-one" class="btn btn-success btn-block">Submit</button>
+                    <button type="update" id="btn-one" class="btn btn-success btn-block">Update</button>
                 </div>
             </div><!-- .col -->
         </div><!-- .row -->

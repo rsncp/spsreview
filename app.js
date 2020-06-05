@@ -9,13 +9,12 @@ let session = require('express-session');
 let passport = require('passport');
 let flash = require('connect-flash');
 let bodyParser = require('body-parser');
+let fileUpload=require('express-fileupload');
 
 let MongoStore = require('connect-mongo')(session);
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-let adminRouter=require('./routes/admin');
-let loginRouter=require('./routes/login');
 let formdisplayRouter=require('./routes/formdisplay');
 let formeditRouter=require('./routes/formedit');
 
@@ -43,6 +42,8 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(fileUpload());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function (req,res,next) {
@@ -57,8 +58,6 @@ app.use(function(req, res,next){
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/admin',adminRouter);
-app.use('/login',loginRouter);
 app.use('/formdisplay',formdisplayRouter);
 app.use('/formedit',formeditRouter);
 
@@ -84,7 +83,7 @@ db.connect(function (error) {
     console.log('Unable to connect database');
     process.exit(1);
   } else {
-    console.log('sps review Database connecetd successfully...');
+    console.log('sps review Database conneceted successfully...');
   }
 
 });

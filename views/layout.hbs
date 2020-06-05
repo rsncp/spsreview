@@ -11,7 +11,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-     <!-- ElegantFonts CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+
+      <!-- ElegantFonts CSS -->
     <link rel="stylesheet" href="../stylesheets/elegant-fonts.css">
 
     <!-- themify-icons CSS -->
@@ -25,9 +28,11 @@
 
    {{!-- form scripte --}}
 
+      <script src="/javascripts/delete.js"></script>
 
-   
-   {{!-- style --}}
+
+
+      {{!-- style --}}
     <link rel='stylesheet' href='/stylesheets/style.css' />
 
   </head>
@@ -55,9 +60,10 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown3" style="font-size:medium; float: left;">
 
                     {{#if login}}
-                            <a class="dropdown-item" href="/login/logout">LogOut</a>
+                            <a class="dropdown-item" href="/users/admin">Admin</a>
+                            <a class="dropdown-item" href="/users/logout">LogOut</a>
                     {{else}}
-                            <a class="dropdown-item" href="/login">LogIn</a>
+                            <a class="dropdown-item" href="/users/signin">LogIn</a>
                     {{/if}}
                 </div>
               </li>

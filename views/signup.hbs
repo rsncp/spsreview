@@ -1,0 +1,33 @@
+<div class="wrapper fadeInDown" style="padding-left: 690px;  padding-top: 150px;">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <img src="../images/spsr.jpg" id="icon" alt="User Icon" />
+        </div>
+
+        {{#if hasErrors}}
+            <div class="alert alert-danger">
+                {{#each messages}}
+                    <p>{{this}}</p>
+                {{/each}}
+            </div>
+        {{/if}}
+
+        <!-- Login Form -->
+        <form action="/users/signup" method="post">
+            <input type="email" id="email" class="fadeIn second" name="email" placeholder="email" style="width: 72%;text-align: center;height: 45px; font-size: 20px;
+            border-color: whitesmoke;background-color: whitesmoke;">
+            <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" style="width: 72%">
+            <input type="hidden" value="{{csrfToken}}" name="_csrf">
+            <input type="submit" class="fadeIn fourth" value="SignUp">
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+            <a class="underlineHover" style="color: black; font-size: 14px;" href="#">Forgot Password?</a>
+        </div>
+
+    </div>
+</div>
